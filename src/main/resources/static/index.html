@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/sockjs.min.js"></script>
+    <script src="./js/stomp.min.js"></script>
+    <script src="./js/index.js"></script>
+    <title>real_chat</title>
+</head>
+<body>
+    <div id="chatContainer" class="hidden">
+        <div class="chatHeader">
+            <h2>Chat</h2>
+            <p id="user"></p>
+        </div>
+        <div id="chatMessages"></div>
+        <div class="chatInput">
+            <form onsubmit="sendMessage(event)">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div class="popupContent">
+            <h2>Login</h2>
+            <input type="text" id="usernameInput" placeholder="Digite seu nome">
+            <button onclick="openChat()">Entrar no Chat</button>
+        </div>
+    </div>
+</body>
+</html>
